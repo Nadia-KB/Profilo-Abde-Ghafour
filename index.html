@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Sara – Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #fcfaff;
+      --card-bg: #ffffff;
+      --accent: #7e5bef;
+      --accent-light: #ccaaff;
+      --text-dark: #2d2d2d;
+      --text-light: #555555;
+      --border: #e0dffd;
+      --shadow: rgba(126, 91, 239, 0.15);
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1.5rem;
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 10;
+    }
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover, nav a.active {
+      color: var(--accent);
+    }
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem; margin-bottom: 1rem;
+      color: var(--accent);
+    }
+    .hero p {
+      font-size: 1.125rem;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+    }
+    .btn {
+      padding: 0.75rem 1.5rem;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .btn:hover {
+      background: var(--accent-light);
+      transform: translateY(-3px);
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px var(--shadow);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      display: block;
+    }
+    .card-content {
+      padding: 1.5rem;
+    }
+    .card-content h3 {
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+    .card-content p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+    .card-content a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .card-content a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="#home" class="active">Home</a>
+    <a href="#about" class="active">About</a>
+    <a href="#contact" class="active">Contact</a>
+  </nav>
+
+  <section id="home" class="hero">
+    <h1>SARA</h1>
+    <p>Necessity is the mother of invention and Sara is its sister.</p>
+    <a href="#work" class="btn">View My Hobby</a>
+  </section>
+
+  <section id="work">
+    <div class="card-container">
+      <div class="card">
+        <img src="draw.png" alt="Hobby 1">
+        <div class="card-content">
+          <h3>Hobby One</h3>
+          <p>Drawing is a creative hobby where I express ideas and emotions through sketches and illustrations. It taught 
+            me patience, observation skills, and how to bring imagination to life visually.</p>
+          <a href="#">See Details →</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="book.png" alt="Hobby 2">
+        <div class="card-content">
+          <h3>Hobby Two</h3>
+          <p>Reading books is a hobby that expands my imagination and knowledge. It
+             helped me improve my vocabulary, focus, and understanding of different cultures and ideas.</p>
+          <a href="#">See Details →</a>
+        </div>
+      </div>
+      <!-- Add more .card items as needed -->
+    </div>
+  </section>
+
+  <section id="about" class="container">
+    <h2 style="text-align:center; margin-bottom:2rem; color: var(--accent);">About Me</h2>
+    <p style="max: width 800px; text-align:center; margin:auto; color: var(--text-light);">
+      Hi! I’m SARA, with a creative and curious mind,<br>
+       I invest myself in my hobbies through my ideas<br>
+        that set me apart from others. I spend my time <br>
+        discovering new things, whether through my own<br> 
+        thinking or other skills.
+    </p>
+  </section>
+
+  <section id="contact" class="container" style="padding:4rem 2rem;">
+    <h2 style="text-align:center; margin-bottom:2rem; color: var(--accent);">Get In Touch</h2>
+    <p style="text-align:center; color: var(--text-light);">
+      Email me at <a href="mailto:nadiakabbab7@example.com" style="color: var(--accent);">sara@example.com</a>, or find me on social media.
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 SARA. Designed with 💜 and pastel vibes.
+  </footer>
+
+</body>
+</html>
